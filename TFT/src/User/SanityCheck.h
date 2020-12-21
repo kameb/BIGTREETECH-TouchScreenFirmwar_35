@@ -10,7 +10,7 @@
 //check size of settings against max allocated size at compile time
 #define SIZE_CHECK(object) ((void)sizeof(char[1 - 2*!!(object)]))
 
-#if CONFIG_VERSION != CONFIG_SUPPPORT
+#if CONFIG_VERSION < CONFIG_SUPPPORT
     #error "the Configuration.h is old. please use the latest Configuration.h file"
 #endif
 
